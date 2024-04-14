@@ -1,0 +1,119 @@
+1. Git профил magdalenapopeska
+
+2. Го преименував името на главната гранка во master
+
+3. Го креирав SI_2024_lab1_223022 remote repository на GitHub
+
+4. Прво креирав директориум SI_2024_lab1_223022 со командата mkdir, па влеговме во тој директориум со cd и на крај правиме git init
+
+5. Со оваа команда: git remote add origin https://github.com/magdalenapopeska/SI_2024_lab1_223022.git го поврзав локалниот репозиториум со оддалечениот репозиториум
+
+6. Креираме датотека README.md со командата  echo "Magdalena Popeska 223022" >> README.md
+ git config --global user.email "magdalena.popeska@students.finki.ukim.mk"
+ git config --global usr.name "magdalenapopeska"
+ git add README.md 
+ git commit -m "Initial commit"
+ git branch -M master
+ git push -u origin master
+
+7. git add SILab1Main.java
+   git add SILab1_
+   git add SILab1_1.java
+   git add SILab1_2.java
+   git commit -m "Add starter code"
+   git push-u origin master
+
+8. git push origin master
+
+9. git checkout -b bug1
+   git push origin bug1
+   git checkout master
+   git checkout -b bug2
+   git push origin bug2
+
+10. git checkout bug1
+
+11. nano SILab1_1.java
+    git add SILab1_1.java
+    git commit -m "Fix wrong condition in filterOddLengthStrings"
+    git push origin bug1
+
+12. git checkout bug2
+
+13. nano SILab1_2.java
+    git add SILab1_2.java
+    git commit -m "Fix wrong condition in makeBigStringFrom"
+    git push origin bug2
+
+14. git checkout bug1
+
+15. nano SILab1Main.java
+    git add SILab1Main.java
+    git commit -m "Call method filterOddLengthStrings in main class"
+    git push origin bug1
+
+16. git checkout bug2
+
+17. nano SILab1Main.java
+    git add SILab1Main.java
+    git commit -m "Call method makeBigStringFrom in main class"
+    git push origin bug2
+
+18. git push origin master
+    git push origin bug1
+    git push origin bug2
+
+19. git checkout master
+
+20.git merge bug1
+-Не се јави конфликт, спојувањето е со Fast-forward
+Magde@DESKTOP-JDPNLCL MINGW64 ~/SI_2024_lab1_223022 (master)
+git merge bug1
+Updating 3600927..4083f80
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+21. git push origin master
+    git push origin bug1
+    git push origin bug2
+
+22. git checkout bug2
+
+23. git rebase master
+-Се јави конфликт
+Magde@DESKTOP-JDPNLCL MINGW64 ~/SI_2024_lab1_223022 (bug2)
+$ git rebase master
+-Се јавува конфликт
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply adf4257...  Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply adf4257... Call method makeBigStringFrom in main class
+-Правиме промена во датотеката со nano SILab1Main.java
+git add SILab1Main.java
+$ git rebase --continue
+
+24. git checkout master
+
+25. git merge bug2
+-Не се јавува конфликт, спојувањето е со Fast-forward
+Magde@DESKTOP-JDPNLCL MINGW64 ~/SI_2024_lab1_223022 (master)
+$ git merge bug2
+Updating 4083f80..0378338
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_2.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+26. git push origin master
+    git push origin bug1
+    git push origin bug2-ова не е успешно, потребно е force
+
+27. git push -u --force origin bug2
+
+28. 
