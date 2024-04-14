@@ -116,4 +116,9 @@ Fast-forward
 
 27. git push -u --force origin bug2
 
-28. 
+28. nano logs.txt
+    git add logs.txt
+    git add 223022.txt
+    git commit -m "Final commit" 
+
+29. git push origin master
